@@ -2,8 +2,6 @@
 
 todo-crud-client-sid is a client-side web application built with React for managing your to-do list. This application allows you to add, edit, delete, and view tasks, complete with task descriptions. It offers a user-friendly interface for organizing and tracking your tasks effectively.
 
-![Demo Screenshot](insert-demo-screenshot-url-here)
-
 ## Table of Contents
 
 - [Key Features](#key-features)
