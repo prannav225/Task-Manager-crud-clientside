@@ -1,38 +1,316 @@
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+/* Add dark mode styles to specific elements as needed */
+.dark-mode .logo {
+  color: #3498db;
+  /* Change color for the logo in dark mode */
+}
+
+.dark-mode .card {
+  background-color: #282828;
+  color: #fff;
+  border: 1px solid #252525;
+}
+
+.dark-mode .card:hover {
+  box-shadow: none;
+  transform: scale(1.02);
+}
+
+.dark-mode textarea {
+  background-color: #3f3f3f;
+  color: #F7F9F9;
+}
+
+.dark-mode input {
+  background-color: #3f3f3f;
+  color: #F7F9F9;
+  outline: 0;
+  border: 0;
+}
+
+.dark-mode .task-form {
+  background-color: #282828;
+  color: #fff;
+  border: 1px solid #3f3f3f;
+  box-shadow: 0px 0px 3px #000;
+}
+
+.sun {
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.toggleBtn {
+  font-size: medium;
+  cursor: pointer;
+  background-color: transparent;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
+  transition: 0.5s;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html::-webkit-scrollbar {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #F7F9F9;
+  /* color: #fff; */
+}
+
+.logo {
+  color: #3498DB;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.task-form {
+  width: 500px;
+  border-radius: 13px;
+  margin: auto;
+  padding: 10px auto;
+  background-color: #FDFEFE;
+  border: 1px solid rgb(244, 242, 242);
+  box-shadow: 0px 0px 3px #71717188;
+}
+
+.task {
+  margin: auto;
+  padding: 10px;
+}
+
+.input-task {
+  width: 400px;
+  height: 35px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 3px;
+  padding-left: 4px;
+  outline: none;
+  margin: 10px;
+}
+
+.input-task:focus {
+  outline: 1px solid #252525;
+}
+
+.add {
+  background-color: #3498DB;
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3px;
+  margin-left: 10px;
+  padding: 9px 20px;
+  transition: 0.3s;
   display: flex;
-  flex-direction: column;
+  margin: 10px auto;
+  transition: 0.5s;
+  border: 1px solid #3498DB;
+}
+
+.add:hover {
+  background-color: transparent;
+  color: #3498DB;
+}
+
+.task-cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-left: 10px;
+  gap: 30px;
+}
+
+.card {
+  padding: 10px;
+  background-color: #fff;
+  color: #0A043C;
+  border: 1px solid rgb(229, 229, 229);
+  height: 300px;
+  width: 300px;
+  border-radius: 13px;
+  text-align: justify;
+  margin: 10px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  box-shadow: 0 50px 30px #71717188;
+  transform: scale3d();
+}
+
+.card-header {
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.btn {
+  cursor: pointer;
   color: white;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px;
+  margin: auto 0;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.edit {
+  background-color: #3498DB;
+  border: 1px solid #3498DB;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit:hover {
+  background-color: transparent;
+  color: #3498DB;
+  border-radius: 50%;
+}
+
+.delete {
+  background-color: #ffcc00;
+  color: #252525;
+  border: 1px solid #ffcc00;
+  transition: 0.5s;
+}
+
+.delete:hover {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.save {
+  background-color: #3498DB;
+  font-size: 16px;
+  border: 1px solid #3498DB;
+  transition: 0.5s;
+}
+
+.save:hover {
+  background-color: transparent;
+  color: #3498DB;
+}
+
+.cancel {
+  font-size: 16px;
+  background-color: #ffcc00;
+  color: #252525;
+  border: 1px solid #ffcc00;
+  transition: 0.5s;
+}
+
+.cancel:hover {
+  background-color: transparent;
+  color: #ffcc00;
+}
+
+textarea {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.edit-form input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 20px 0 20px 0px;
+  font-size: 16px;
+}
+
+/* Register */
+.dark-mode .register-form {
+  background-color: #3f3f3f;
+  border: 1px solid #282828;
+}
+
+.register-form {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  background-color: #FDFEFE;
+  border: 1px solid rgb(244, 242, 242);
+  box-shadow: 0px 0px 3px #71717188;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.register-form input {
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid #181818;
+  padding-left: 4px;
+  display: block;
+  height: 30px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+.registerBtn {
+  background-color: #3498DB;
+  border: 1px solid #3498DB;
+  padding: 10px 102px;
+}
+
+.registerBtn:hover {
+  background-color: transparent;
+  color: #3498DB;
+}
+
+/* Login */
+.dark-mode .login-form{
+  background-color: #3f3f3f;
+  border: 1px solid #282828;
+}
+.login-form {
+  margin: auto;
+  background-color: #FDFEFE;
+  border: 1px solid rgb(244, 242, 242);
+  box-shadow: 0px 0px 3px #71717188;
+  border-radius: 9px;
+  transition: 0.5s;
+  height: 350px;
+  width: 300px;
+}
+
+.login-form input {
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid #181818;
+  padding-left: 4px;
+  display: block;
+  height: 30px;
+  width: 240px;
+  margin: 20px auto;
 }
